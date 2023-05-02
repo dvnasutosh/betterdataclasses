@@ -1,0 +1,130 @@
+[
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "typing",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "typing",
+        "description": "typing",
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "to_raw_dict",
+        "importPath": "helper.to_dict",
+        "description": "helper.to_dict",
+        "isExtraImport": true,
+        "detail": "helper.to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "StrictDictionary",
+        "importPath": "StrictDictionary",
+        "description": "StrictDictionary",
+        "isExtraImport": true,
+        "detail": "StrictDictionary",
+        "documentation": {}
+    },
+    {
+        "label": "to_raw_dict",
+        "kind": 2,
+        "importPath": "helper.to_dict",
+        "description": "helper.to_dict",
+        "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = dict()\n        for key, value in obj.items():\n            if isinstance(value, dict):",
+        "detail": "helper.to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "Dictionary",
+        "kind": 6,
+        "importPath": "StrictDictionary",
+        "description": "StrictDictionary",
+        "peekOfCode": "class Dictionary:\n    \"\"\"\n    A class that can be used to create a dictionary-like object with arbitrary key-value pairs.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initializes the object with the given keyword arguments.\n        If no arguments are given, the attributes are set to `None`.\n        \"\"\"\n        # Iterate over the class annotations and set the attributes",
+        "detail": "StrictDictionary",
+        "documentation": {}
+    },
+    {
+        "label": "StrictDictionary",
+        "kind": 6,
+        "importPath": "StrictDictionary",
+        "description": "StrictDictionary",
+        "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values\n        for i,j in self.idata.items():",
+        "detail": "StrictDictionary",
+        "documentation": {}
+    },
+    {
+        "label": "SD",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class SD(StrictDictionary):\n    a: int\n    b: int\n    c: str\nclass NestedSD(StrictDictionary):\n    name: str\n    values: List[SD]\nclass ComplexSD(StrictDictionary):\n    x: float\n    y: float",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "NestedSD",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class NestedSD(StrictDictionary):\n    name: str\n    values: List[SD]\nclass ComplexSD(StrictDictionary):\n    x: float\n    y: float\n    nested: NestedSD\nprint(ComplexSD().__raw__())",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "ComplexSD",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class ComplexSD(StrictDictionary):\n    x: float\n    y: float\n    nested: NestedSD\nprint(ComplexSD().__raw__())",
+        "detail": "test",
+        "documentation": {}
+    }
+]
