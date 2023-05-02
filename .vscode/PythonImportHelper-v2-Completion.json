@@ -59,45 +59,45 @@
     },
     {
         "label": "to_raw_dict",
-        "importPath": "helper.to_dict",
-        "description": "helper.to_dict",
+        "importPath": "better_dataclass.helper.to_dict",
+        "description": "better_dataclass.helper.to_dict",
         "isExtraImport": true,
-        "detail": "helper.to_dict",
+        "detail": "better_dataclass.helper.to_dict",
         "documentation": {}
     },
     {
         "label": "StrictDictionary",
-        "importPath": "StrictDictionary",
-        "description": "StrictDictionary",
+        "importPath": "better_dataclass.StrictDictionary",
+        "description": "better_dataclass.StrictDictionary",
         "isExtraImport": true,
-        "detail": "StrictDictionary",
+        "detail": "better_dataclass.StrictDictionary",
         "documentation": {}
     },
     {
         "label": "to_raw_dict",
         "kind": 2,
-        "importPath": "helper.to_dict",
-        "description": "helper.to_dict",
+        "importPath": "better_dataclass.helper.to_dict",
+        "description": "better_dataclass.helper.to_dict",
         "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = dict()\n        for key, value in obj.items():\n            if isinstance(value, dict):",
-        "detail": "helper.to_dict",
+        "detail": "better_dataclass.helper.to_dict",
         "documentation": {}
     },
     {
         "label": "Dictionary",
         "kind": 6,
-        "importPath": "StrictDictionary",
-        "description": "StrictDictionary",
+        "importPath": "better_dataclass.StrictDictionary",
+        "description": "better_dataclass.StrictDictionary",
         "peekOfCode": "class Dictionary:\n    \"\"\"\n    A class that can be used to create a dictionary-like object with arbitrary key-value pairs.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initializes the object with the given keyword arguments.\n        If no arguments are given, the attributes are set to `None`.\n        \"\"\"\n        # Iterate over the class annotations and set the attributes",
-        "detail": "StrictDictionary",
+        "detail": "better_dataclass.StrictDictionary",
         "documentation": {}
     },
     {
         "label": "StrictDictionary",
         "kind": 6,
-        "importPath": "StrictDictionary",
-        "description": "StrictDictionary",
+        "importPath": "better_dataclass.StrictDictionary",
+        "description": "better_dataclass.StrictDictionary",
         "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values\n        for i,j in self.idata.items():",
-        "detail": "StrictDictionary",
+        "detail": "better_dataclass.StrictDictionary",
         "documentation": {}
     },
     {

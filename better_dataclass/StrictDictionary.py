@@ -2,7 +2,7 @@ from typing import Any,get_origin
 import typing
 import json
 from enum import Enum
-from helper.to_dict import to_raw_dict
+from better_dataclass.helper.to_dict import to_raw_dict
 class Dictionary:
     """
     A class that can be used to create a dictionary-like object with arbitrary key-value pairs.

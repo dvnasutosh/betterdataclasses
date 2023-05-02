@@ -1,4 +1,4 @@
-from StrictDictionary import StrictDictionary
+from better_dataclass.StrictDictionary import StrictDictionary
 
 from typing import List
 
