@@ -1,8 +1,9 @@
-from typing import Any,get_origin
+from typing import List, List, List, Any,get_origin
 import typing
 import json
 from enum import Enum
 from better_dataclass.helper.to_dict import to_raw_dict
+
 class Dictionary:
     """
     A class that can be used to create a dictionary-like object with arbitrary key-value pairs.
@@ -16,31 +17,46 @@ class Dictionary:
         # based on the given keyword arguments
         for i,j in self.__annotations__.items():
             try:
-                getattr(self,i)
+                self.__data__= getattr(self,i)
             except AttributeError:
-                setattr(self,i,None)
-        for i, j in self.__annotations__.items() if not kwargs else kwargs.items(): # k if k=.. else annot
-            setattr(self, i, j)
-
-
+                self.__data__[i]=None
+        kwargs=kwargs if kwargs else dict() # nothing much just assigning empty dict to kwargs if kwargs has no value
+        
+        for i, j in kwargs.items():
+            self.__data__[i] = j
+        
+    
+    # def __init_subclass__(cls) -> None:
+    #     cls.__data__=dict()
+    #     for k,v in cls.__dict__.items():
+            
+    #         # Checking if the key is an internal key than skip the value
+    #         if len(k)>1:
+    #             if k[0]=='_':
+    #                 if[1]=='_':
+    #                     continue;
+            
+    #         cls.__data__[k]=v
+            
     def __repr__(self) -> str:
         """
         Returns a string representation of the object's dictionary.
         """
-        return str(self.__dict__)
+        return str(self.__raw__())
     
     def __call__(self,raw:bool=False) -> dict:
-
-        return self.__dict__ if not raw else self.__raw__()
+        return self.__data__ if not raw else self.__raw__()
     
     def __str__(self):
-        return str(self.__dict__)
+        return str(self.__raw__())
 
     def __json__(self):
         return json.dumps(self.__raw__())
     
     def __raw__(self):
-        return to_raw_dict(self.__dict__)
+        # print(type(self.__data__['nested']))
+        print(self.__dict__)
+        return (self.__data__)
 
 
 
@@ -48,13 +64,16 @@ class Dictionary:
         """
         Provides indexing and assignment functionality to the object.
         """
-        setattr(self, __name, __value)
+        self.__data__[__name]=__value
+        setattr(self,__name,__value)
+    
+    
 
     def __getitem__(self, __name) -> Any:
         """
         Provides indexing and retrieval functionality to the object.
         """
-        return self.__dict__[__name]
+        return self.__data__[__name]
 
 class StrictDictionary(Dictionary):
     """
@@ -65,7 +84,7 @@ class StrictDictionary(Dictionary):
         Initialize any given data to be stored. The default datas are stored regardless 
         """
         # Adding default values
-        for i,j in self.idata.items():
+        for i,j in self.__data__.items():
             super().__setitem__(i,j)
         if kwargs:
             # if kwargs exists adding all the given values using super class
@@ -83,7 +102,7 @@ class StrictDictionary(Dictionary):
                 super().__setitem__(i,j)
                 
     def __init_subclass__(cls) -> None:
-        cls.idata=dict()
+        cls.__data__=dict()
         if not cls.__annotations__:
             raise AttributeError('You need to add type hintings for now. Will be solved in future versions. partial annotation is accepted but is not allowed as a part of the data')
         for i, j in cls.__annotations__.items():
@@ -98,7 +117,7 @@ class StrictDictionary(Dictionary):
                     raise TypeError(
                         f'{i} key has a value {cls.__dict__[i]} which is of type {type(cls.__dict__[i])}. {expected_type} expected.')
                 
-                cls.idata[i]=cls.__dict__[i]
+                cls.__data__[i]=cls.__dict__[i]
             else:
                 if type(get_origin(j)) == type(Enum) or type(j)== type(Enum):
                     
@@ -107,16 +126,31 @@ class StrictDictionary(Dictionary):
 
                         raise AttributeError(f'You need default to be set as a enum member. of {j}. Current {j._member_names_}')
                     
-                    cls.idata[i]=j.__members__['default']
+                    cls.__data__[i]=j.__members__['default']
                 elif type(j) is type:
-                    cls.idata[i] = j()
+                    cls.__data__[i] = j()
+                    
                     
                 elif get_origin(j):
-                    cls.idata[i] = j.__origin__()
+                    cls.__data__[i] = j.__origin__()
                 else:
                     raise ValueError(f"can't assign {type(j)} data. Illegal Value.")
 
+    def vaidate(self,__name,__value):
+        expected_type=self.__annotations__[__name] 
         
+        # Checking if expected_type is of Typing Class than converting it into it's base class
+        if get_origin(expected_type):
+            expected_type=get_origin(expected_type)
+        elif self.__annotations__[__name]==Any:
+            return True
+        
+        # Raise error if the given value is not of the expected type
+        if not isinstance(__value,expected_type):
+            raise TypeError(
+                f'{__name} key has a value {__value} which is of type {type(__value)}. {expected_type} expected.')
+        return True
+    
     def __setattr__(self, __name: str, __value: Any) -> None:
         """
         Overrides the superclass `__setattr__` method to perform type checking before assignment.
@@ -127,7 +161,7 @@ class StrictDictionary(Dictionary):
         # Checking if expected_type is of Typing Class than converting it into it's base class
         if get_origin(expected_type):
             expected_type=get_origin(expected_type)
-        
+            
         # Raise error if the given value is not of the expected type
         if not isinstance(__value,expected_type):
             raise TypeError(
