@@ -1,4 +1,5 @@
-from typing import List, List, List, Any,get_origin
+import enum
+from typing import  Type, List, Any,get_origin
 import typing
 import json
 from enum import Enum
@@ -26,17 +27,17 @@ class Dictionary:
             self.__data__[i] = j
         
     
-    # def __init_subclass__(cls) -> None:
-    #     cls.__data__=dict()
-    #     for k,v in cls.__dict__.items():
-            
-    #         # Checking if the key is an internal key than skip the value
-    #         if len(k)>1:
-    #             if k[0]=='_':
-    #                 if[1]=='_':
-    #                     continue;
-            
-    #         cls.__data__[k]=v
+                                                        # def __init_subclass__(cls) -> None:
+                                                        #     cls.__data__=dict()
+                                                        #     for k,v in cls.__dict__.items():
+                                                                
+                                                        #         # Checking if the key is an internal key than skip the value
+                                                        #         if len(k)>1:
+                                                        #             if k[0]=='_':
+                                                        #                 if[1]=='_':
+                                                        #                     continue;
+                                                                
+                                                        #         cls.__data__[k]=v
             
     def __repr__(self) -> str:
         """
@@ -60,20 +61,20 @@ class Dictionary:
 
 
 
-    def __setitem__(self, __name, __value) -> None:
+    def __setitem__(self, name, value) -> None:
         """
         Provides indexing and assignment functionality to the object.
         """
-        self.__data__[__name]=__value
-        setattr(self,__name,__value)
+        self.__data__[name]=value
+        setattr(self,name,value)
     
     
 
-    def __getitem__(self, __name) -> Any:
+    def __getitem__(self, name) -> Any:
         """
         Provides indexing and retrieval functionality to the object.
         """
-        return self.__data__[__name]
+        return self.__data__[name]
 
 class StrictDictionary(Dictionary):
     """
@@ -129,76 +130,98 @@ class StrictDictionary(Dictionary):
                     cls.__data__[i]=j.__members__['default']
                 elif type(j) is type:
                     cls.__data__[i] = j()
-                    
+
                     
                 elif get_origin(j):
                     cls.__data__[i] = j.__origin__()
                 else:
                     raise ValueError(f"can't assign {type(j)} data. Illegal Value.")
-
-    def vaidate(self,__name,__value):
-        expected_type=self.__annotations__[__name] 
-        
-        # Checking if expected_type is of Typing Class than converting it into it's base class
-        if get_origin(expected_type):
-            expected_type=get_origin(expected_type)
-        elif self.__annotations__[__name]==Any:
-            return True
-        
-        # Raise error if the given value is not of the expected type
-        if not isinstance(__value,expected_type):
-            raise TypeError(
-                f'{__name} key has a value {__value} which is of type {type(__value)}. {expected_type} expected.')
-        return True
     
-    def __setattr__(self, __name: str, __value: Any) -> None:
+    def getExpectedType(j:Type):
+        pass
+    def validate(self,annot:typing.Type,value):
+
+        # Check Union
+        if type(value)==annot: 
+            return True
+        if typing.get_origin(annot) in (typing.Union, typing.Optional):
+            
+            isValid=list()
+            
+            for args in typing.get_args(annot):
+                isValid.append(self.validate(args,value))
+            return any(isValid)
+        
+        # Check List
+        elif typing.get_origin(annot) in (typing.List,list) :
+            listValid=list()
+            if type(value)!=list:
+                return False
+            for each in value:
+                # Check each data and if any of the data doesn't comply with annotations
+                listValid.append(isinstance(each,typing.get_args(annot)))       
+        
+            return all(listValid)
+        
+        # Check Final
+        elif typing.get_origin(annot) == typing.Final:
+            return False
+        # check Literal
+        elif typing.Literal in (typing.get_origin(annot),annot):
+            return value in typing.get_args(annot)
+        elif issubclass(annot,enum.Enum):
+            return isinstance(value, annot) or value in [member.value for member in annot]
+
+    
+    def __setattr__(self, name: str, value: Any) -> None:
         """
         Overrides the superclass `__setattr__` method to perform type checking before assignment.
         If the value to be assigned is not of the expected type, a `TypeError` is raised.
         """
-        expected_type=self.__annotations__[__name] 
+        
+        expected_type=self.__annotations__[name] 
         
         # Checking if expected_type is of Typing Class than converting it into it's base class
         if get_origin(expected_type):
             expected_type=get_origin(expected_type)
             
         # Raise error if the given value is not of the expected type
-        if not isinstance(__value,expected_type):
+        if not isinstance(value,expected_type):
             raise TypeError(
-                f'{__name} key has a value {__value} which is of type {type(__value)}. {expected_type} expected.')
+                f'{name} key has a value {value} which is of type {type(value)}. {expected_type} expected.')
         
-        super().__setattr__(__name, __value)
+        super().__setattr__(name, value)
 
 
-    def __setitem__(self, __name, __value) -> None:
+    def __setitem__(self, name, value) -> None:
         """
         Overrides the superclass `__setitem__` method to perform type checking before assignment.
         If the value to be assigned is not of the expected type, a `TypeError` is raised.
         """
-        expected_type=self.__annotations__[__name]
+        expected_type=self.__annotations__[name]
 
         # verifying for Typing types
         if get_origin(expected_type):
             expected_type=expected_type.__origin__
 
-        if not isinstance(__value,expected_type):
+        if not isinstance(value,expected_type):
             raise TypeError(
-                f'{__name} key has a value {__value} which is of type {type(__value)}. {self.__annotations__[__name]} expected.')
+                f'{name} key has a value {value} which is of type {type(value)}. {self.__annotations__[name]} expected.')
         else:
-            super().__setitem__(__name, __value)
+            super().__setitem__(name, value)
 
         """
         Overrides the superclass `__setitem__` method to perform type checking before assignment.
         If the value to be assigned is not of the expected type, a `TypeError` is raised.
         """
-        expected_type=self.__annotations__[__name]
+        expected_type=self.__annotations__[name]
 
         # verifying for Typing types
         if get_origin(expected_type):
             expected_type=expected_type.__origin__
 
-        if not isinstance(__value,expected_type):
+        if not isinstance(value,expected_type):
             raise TypeError(
-                f'{__name} key has a value {__value} which is of type {type(__value)}. {self.__annotations__[__name]} expected.')
+                f'{name} key has a value {value} which is of type {type(value)}. {self.__annotations__[name]} expected.')
         else:
-            super().__setitem__(__name, __value)
+            super().__setitem__(name, value)
