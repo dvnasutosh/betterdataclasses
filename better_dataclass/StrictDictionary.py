@@ -28,19 +28,6 @@ class Dictionary(object):
         for i, j in kwargs.items():
             self.__data__[i] = j
         
-    
-                                                        # def __init_subclass__(cls) -> None:
-                                                        #     cls.__data__=dict()
-                                                        #     for k,v in cls.__dict__.items():
-                                                                
-                                                        #         # Checking if the key is an internal key than skip the value
-                                                        #         if len(k)>1:
-                                                        #             if k[0]=='_':
-                                                        #                 if[1]=='_':
-                                                        #                     continue;
-                                                                
-                                                        #         cls.__data__[k]=v
-            
     def __repr__(self) -> str:
         """
         Returns a string representation of the object's dictionary.
@@ -64,7 +51,7 @@ class Dictionary(object):
         """
         Provides indexing and assignment functionality to the object.
         """
-        self.__setattr__(name,value)
+        self.__data__[name]=value
         
 
     def __setattr__(self, __name: str, __value: Any) -> None:
@@ -106,20 +93,23 @@ class StrictDictionary(Dictionary):
                 
                 super().__setitem__(i,j)
                 # NOTE: If it is in data AND NOT IN annot than 
+    
     def __init_subclass__(cls) -> None:
         cls.__data__= {}
         
         for k,v in cls.__dict__.items():
             if len(k)>=2 and k[0]!='_' and k[1]!='_':
+                print("hello")
                 # Handling when it is present in dict but not in annot.(It will default to What is provided)
                 if k not in cls.__annotations__:
                     pass
                 elif Final == cls.__annotations__[k]:
                     pass         
                 elif Final == get_origin(cls.__annotations__[k]):
-                    if not validate(get_args(cls.__annotations__[k]),v):
-                        raise ValueError(f"{v} is not of type {get_args(cls.__annotations__[k])}")
-            cls.__data__[k] = v
+                    if not validate(get_args(cls.__annotations__[k])[0],v):
+                        raise ValueError(f"{v} is not of type {get_args(cls.__annotations__[k])[0]}")
+                cls.__data__[k] = v
+
         for k,v in cls.__annotations__.items():
             if k not in cls.__data__:
                 cls.__data__[k]=initialize(v)
@@ -132,8 +122,13 @@ class StrictDictionary(Dictionary):
         """
     
         # Raise error if the given value is not of the expected type
-        self.__setitem__(name,value)
+        if name in self.__data__ and name not in self.__annotations__:
+            pass
+        elif not validate(self.__annotations__[name],value):
+            raise TypeError(
+                f'{name} key has a value {value} which is of type {type(value)}. {self.__annotations__[name]} expected.')
 
+        super().__setitem__(name, value)
 
     def __setitem__(self, name, value) -> None:
         """
@@ -147,5 +142,3 @@ class StrictDictionary(Dictionary):
                 f'{name} key has a value {value} which is of type {type(value)}. {self.__annotations__[name]} expected.')
 
         super().__setitem__(name, value)
-        
-# As.s, As['s']
