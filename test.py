@@ -12,6 +12,7 @@ class SD(StrictDictionary):
 class NestedSD(StrictDictionary):
     name: str
     values: List
+
 class Data(StrictDictionary):
     d1:Union[int,float]
     d2:Optional[int]
