@@ -1,5 +1,14 @@
 [
     {
+        "label": "enum",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "enum",
+        "description": "enum",
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "Enum",
         "importPath": "enum",
         "description": "enum",
@@ -9,6 +18,22 @@
     },
     {
         "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "EnumCheck",
         "importPath": "enum",
         "description": "enum",
         "isExtraImport": true,
@@ -33,7 +58,31 @@
         "documentation": {}
     },
     {
-        "label": "get_origin",
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -42,6 +91,262 @@
     },
     {
         "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -66,6 +371,30 @@
         "documentation": {}
     },
     {
+        "label": "validate",
+        "importPath": "better_dataclass.helper.validate",
+        "description": "better_dataclass.helper.validate",
+        "isExtraImport": true,
+        "detail": "better_dataclass.helper.validate",
+        "documentation": {}
+    },
+    {
+        "label": "initialize",
+        "importPath": "better_dataclass.helper.initiate",
+        "description": "better_dataclass.helper.initiate",
+        "isExtraImport": true,
+        "detail": "better_dataclass.helper.initiate",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "ast",
+        "description": "ast",
+        "isExtraImport": true,
+        "detail": "ast",
+        "documentation": {}
+    },
+    {
         "label": "StrictDictionary",
         "importPath": "better_dataclass.StrictDictionary",
         "description": "better_dataclass.StrictDictionary",
@@ -74,12 +403,30 @@
         "documentation": {}
     },
     {
+        "label": "initialize",
+        "kind": 2,
+        "importPath": "better_dataclass.helper.initiate",
+        "description": "better_dataclass.helper.initiate",
+        "peekOfCode": "def initialize(annot: Type) -> Any:\n    # handling Union\n    if get_origin(annot)== Optional or type(None) in get_args(annot):\n        return None\n    if get_origin(annot) == Union:\n        return initialize(get_args(annot)[0])\n    elif get_origin(annot) in (List,list):\n        return []\n    elif get_origin(annot) in (Dict,dict):\n        return {}",
+        "detail": "better_dataclass.helper.initiate",
+        "documentation": {}
+    },
+    {
         "label": "to_raw_dict",
         "kind": 2,
         "importPath": "better_dataclass.helper.to_dict",
         "description": "better_dataclass.helper.to_dict",
-        "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = dict()\n        for key, value in obj.items():\n            if isinstance(value, dict):",
+        "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = {}\n        for key, value in obj.items():\n            if isinstance(value, dict):",
         "detail": "better_dataclass.helper.to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "kind": 2,
+        "importPath": "better_dataclass.helper.validate",
+        "description": "better_dataclass.helper.validate",
+        "peekOfCode": "def validate(annot:Type,value):  # sourcery skip: low-code-quality\n    if type(value) in (annot,get_origin(annot)) : \n        return True\n    if annot==Any or get_origin(annot)==Any:\n        return True\n    # Check Union\n    if get_origin(annot) in (Union, Optional):\n        return any(validate(args,value) for args in get_args(annot))\n    sequentialList=[List,Tuple,Set]\n    if annot in sequentialList or get_origin(annot) in [get_origin(sq) for sq in sequentialList]:",
+        "detail": "better_dataclass.helper.validate",
         "documentation": {}
     },
     {
@@ -87,7 +434,7 @@
         "kind": 6,
         "importPath": "better_dataclass.StrictDictionary",
         "description": "better_dataclass.StrictDictionary",
-        "peekOfCode": "class Dictionary:\n    \"\"\"\n    A class that can be used to create a dictionary-like object with arbitrary key-value pairs.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initializes the object with the given keyword arguments.\n        If no arguments are given, the attributes are set to `None`.\n        \"\"\"\n        # Iterate over the class annotations and set the attributes",
+        "peekOfCode": "class Dictionary(object):\n    \"\"\"\n    A class that can be used to create a dictionary-like object with arbitrary key-value pairs.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initializes the object with the given keyword arguments.\n        If no arguments are given, the attributes are set to `None`.\n        \"\"\"\n        # Iterate over the class annotations and set the attributes",
         "detail": "better_dataclass.StrictDictionary",
         "documentation": {}
     },
@@ -96,7 +443,7 @@
         "kind": 6,
         "importPath": "better_dataclass.StrictDictionary",
         "description": "better_dataclass.StrictDictionary",
-        "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values\n        for i,j in self.idata.items():",
+        "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    precaution: dont use Enum. Cant be converted into JSON \n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values",
         "detail": "better_dataclass.StrictDictionary",
         "documentation": {}
     },
@@ -105,7 +452,7 @@
         "kind": 6,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "class SD(StrictDictionary):\n    a: int\n    b: int\n    c: str\nclass NestedSD(StrictDictionary):\n    name: str\n    values: List[SD]\nclass ComplexSD(StrictDictionary):\n    x: float\n    y: float",
+        "peekOfCode": "class SD(StrictDictionary):\n    a: int\n    b: int\n    c: str\nclass NestedSD(StrictDictionary):\n    name: str\n    values: List\nclass Data(StrictDictionary):\n    d1:Union[int,float]\n    d2:Optional[int]",
         "detail": "test",
         "documentation": {}
     },
@@ -114,7 +461,16 @@
         "kind": 6,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "class NestedSD(StrictDictionary):\n    name: str\n    values: List[SD]\nclass ComplexSD(StrictDictionary):\n    x: float\n    y: float\n    nested: NestedSD\nprint(ComplexSD().__raw__())",
+        "peekOfCode": "class NestedSD(StrictDictionary):\n    name: str\n    values: List\nclass Data(StrictDictionary):\n    d1:Union[int,float]\n    d2:Optional[int]\n    d3:Union[List[List[int]],Tuple]\n    d4:Literal['Hey','Fine']\n    d5:Final[int]=10\nclass ComplexSD(StrictDictionary):",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "Data",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class Data(StrictDictionary):\n    d1:Union[int,float]\n    d2:Optional[int]\n    d3:Union[List[List[int]],Tuple]\n    d4:Literal['Hey','Fine']\n    d5:Final[int]=10\nclass ComplexSD(StrictDictionary):\n    x=99.0\n    y: float\n    Un:Union[str,List]",
         "detail": "test",
         "documentation": {}
     },
@@ -123,7 +479,61 @@
         "kind": 6,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "class ComplexSD(StrictDictionary):\n    x: float\n    y: float\n    nested: NestedSD\nprint(ComplexSD().__raw__())",
+        "peekOfCode": "class ComplexSD(StrictDictionary):\n    x=99.0\n    y: float\n    Un:Union[str,List]\n    nested: NestedSD\n    d:Data\n# check if Union> get args > get args  \nclass XX(Enum):\n    Data=2\n    Data2=3",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "XX",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class XX(Enum):\n    Data=2\n    Data2=3\n    Data3=\"3\"\nclass X:\n    s:Union[str,int]\n    t:XX\ns=ComplexSD()\nprint(s.__raw__())\ns.nested.name='323'",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "X",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class X:\n    s:Union[str,int]\n    t:XX\ns=ComplexSD()\nprint(s.__raw__())\ns.nested.name='323'\ns.nested.values=['323']\n# SECTION\nclass Testing(StrictDictionary):\n    Integer:int",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "Testing",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class Testing(StrictDictionary):\n    Integer:int\n    IntList:List[int]\n    IFList:List[Union[int,float]]\n    UFInt:Union[int,float]\n    Union2:Union[int,List[float]]\n    Optional:Optional[int]\nx={\n    \"Integer\":0,\n    \"IntList\":[0],",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class s(Enum):\n    a=1\n    b=2\nclass B:\n    s:Enum\n# print(get_args(dict))\n# print(type({\"4\":\"d\",5:\"ffd\"})==typing.Dict[int,str])\n# from better_dataclass.helper.initiate import initialize\nclass T2(StrictDictionary):\n    a:int",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "B",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class B:\n    s:Enum\n# print(get_args(dict))\n# print(type({\"4\":\"d\",5:\"ffd\"})==typing.Dict[int,str])\n# from better_dataclass.helper.initiate import initialize\nclass T2(StrictDictionary):\n    a:int\n    b:float\nob1=T2()\n# ob1.c=34.8",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "T2",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class T2(StrictDictionary):\n    a:int\n    b:float\nob1=T2()\n# ob1.c=34.8\nprint(ob1)",
         "detail": "test",
         "documentation": {}
     }

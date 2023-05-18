@@ -8,7 +8,7 @@ def to_raw_dict(obj: object, processed=None):
         return "<circular reference>"
     processed.add(id(obj))
     if isinstance(obj, dict):
-        out = dict()
+        out = {}
         for key, value in obj.items():
             if isinstance(value, dict):
                 out[key] = to_raw_dict(value, processed)
@@ -24,10 +24,7 @@ def to_raw_dict(obj: object, processed=None):
                 out[key] = str(value)
         return out
     elif isinstance(obj, (list, tuple, set)):
-        l = []
-        for item in obj:
-            l.append(to_raw_dict(item, processed))
-        return l
+        return [to_raw_dict(item, processed) for item in obj]
     elif isinstance(obj, (int, float, bool, complex, str)):
         return obj
     elif isinstance(obj, Enum):

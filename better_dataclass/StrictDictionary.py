@@ -72,6 +72,7 @@ class Dictionary(object):
 class StrictDictionary(Dictionary):
     """
     A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.
+    precaution: dont use Enum. Cant be converted into JSON 
     """
     def __init__(self, **kwargs) -> None:
         """
