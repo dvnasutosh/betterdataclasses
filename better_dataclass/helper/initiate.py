@@ -1,47 +1,35 @@
 import typing
 import enum
+from typing import Any, Literal, Union, Optional, Tuple, List, Set, Dict, Type, get_origin, get_args
 
-def initialize(annot: typing.Type) -> typing.Any:
-    if typing.get_origin(annot) in (typing.Union, typing.Optional):
-        for args in typing.get_args(annot):
-            try:
-                return initialize(args)
-            except ValueError:
-                continue
-        raise ValueError(f"Unable to initialize value for annot: {annot}")
-
+# TODO: handle Union, Optional, Dict, anySequence
+def initialize(annot: Type) -> Any:
     
     # handling Union
-    elif typing.get_origin(annot) == typing.Union:
-        return initialize(typing.get_args(annot)[0])
+    if get_origin(annot) == Union:
+        return initialize(get_args(annot)[0])
+    elif get_origin(annot)== Optional:
+        return None
     
- 
-    elif typing.get_origin(annot) == typing.Dict:
-        key_type, value_type = typing.get_args(annot)
-        return {initialize(key_type):initialize(value_type)}
+    elif get_origin(annot) in (List,list):
+        return []
+    
+    elif get_origin(annot) in (Dict,dict):
+        return {}
+    
+    elif get_origin(annot) in (Set,set):
+        return set()
+    
+    elif get_origin(annot) in (Tuple,tuple):
+        return tuple()
 
-    elif typing.get_origin(annot) == typing.Set:
-        inner_type = typing.get_args(annot)[0]
-        return set(initialize(inner_type))
-
-    elif typing.get_origin(annot) == typing.Tuple:
-        inner_types = typing.get_args(annot)
-        return tuple(initialize(arg) for arg in inner_types)
-
-
-    elif typing.get_origin(annot) == typing.TypeVar:
-        raise ValueError(f"Unable to initialize value for annot: {annot}")
-
-    elif typing.get_origin(annot) == typing.Final:
-        raise ValueError(f"Unable to initialize value for annot: {annot}")
-
-    elif typing.Literal in (typing.get_origin(annot), annot):
-        return next(iter(typing.get_args(annot)))
+    elif Literal in (get_origin(annot), annot):
+        return next(iter(get_args(annot)))
 
     elif isinstance(annot,type) and issubclass(annot, enum.Enum):
         return next(iter(annot))
 
-    elif annot is typing.Any:
+    elif annot is Any:
         return None
 
     try:
@@ -59,29 +47,29 @@ print(initialize(bool))             # Expected: False
 print(initialize(float))            # Expected: 0.0
 
 # Case 2: Union initialization
-print(initialize(typing.Union[int, str]))         # Expected: 0
-print(initialize(typing.Union[str, bool]))        # Expected: ''
-print(initialize(typing.Union[float, int, bool])) # Expected: 0.0
+print(initialize(Union[int, str]))         # Expected: 0
+print(initialize(Union[str, bool]))        # Expected: ''
+print(initialize(Union[float, int, bool])) # Expected: 0.0
 
 # Case 3: List initialization
-print(initialize(typing.List[int]))        # Expected: []
-print(initialize(typing.List[str]))        # Expected: []
-print(initialize(typing.List[bool]))       # Expected: []
+print(initialize(List[int]))        # Expected: []
+print(initialize(List[str]))        # Expected: []
+print(initialize(List[bool]))       # Expected: []
 
 # Case 4: Dict initialization
-print(initialize(typing.Dict[str, int]))   # Expected: {}
-print(initialize(typing.Dict[int, bool]))  # Expected: {}
+print(initialize(Dict[str, int]))   # Expected: {}
+print(initialize(Dict[int, bool]))  # Expected: {}
 
 # Case 5: Set initialization
-print(initialize(typing.Set[str]))         # Expected: set()
-print(initialize(typing.Set[int]))         # Expected: set()
+print(initialize(Set[str]))         # Expected: set()
+print(initialize(Set[int]))         # Expected: set()
 
 # Case 6: Tuple initialization
-print(initialize(typing.Tuple[int, str]))  # Expected: (0, '')
-print(initialize(typing.Tuple[str, int]))  # Expected: ('', 0)
+print(initialize(Tuple[int, str]))  # Expected: (0, '')
+print(initialize(Tuple[str, int]))  # Expected: ('', 0)
 
 # Case 7: Literal initialization
-print(initialize(typing.Literal[1, 2, 3]))  # Expected: 1
+print(initialize(Literal[1, 2, 3]))  # Expected: 1
 
 # Case 8: Enum initialization
 class Color(enum.Enum):
@@ -92,6 +80,6 @@ class Color(enum.Enum):
 print(initialize(Color))                    # Expected: Color.RED
 
 # Case 9: Any initialization
-print(initialize(typing.Any))                # Expected: None
+print(initialize(Any))                # Expected: None
 
 
