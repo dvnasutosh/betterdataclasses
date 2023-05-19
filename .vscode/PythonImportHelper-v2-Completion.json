@@ -17,39 +17,6 @@
         "documentation": {}
     },
     {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "EnumCheck",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "typing",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "typing",
-        "description": "typing",
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -290,63 +257,7 @@
         "documentation": {}
     },
     {
-        "label": "Final",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Literal",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "TypedDict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "get_origin",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
+        "label": "Any",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -379,6 +290,14 @@
         "documentation": {}
     },
     {
+        "label": "validate",
+        "importPath": "better_dataclass.helper.validate",
+        "description": "better_dataclass.helper.validate",
+        "isExtraImport": true,
+        "detail": "better_dataclass.helper.validate",
+        "documentation": {}
+    },
+    {
         "label": "initialize",
         "importPath": "better_dataclass.helper.initiate",
         "description": "better_dataclass.helper.initiate",
@@ -387,19 +306,36 @@
         "documentation": {}
     },
     {
-        "label": "Tuple",
-        "importPath": "ast",
-        "description": "ast",
+        "label": "Iterable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
         "isExtraImport": true,
-        "detail": "ast",
+        "detail": "collections.abc",
         "documentation": {}
     },
     {
-        "label": "StrictDictionary",
-        "importPath": "better_dataclass.StrictDictionary",
-        "description": "better_dataclass.StrictDictionary",
+        "label": "SupportsIndex",
+        "importPath": "typing_extensions",
+        "description": "typing_extensions",
         "isExtraImport": true,
-        "detail": "better_dataclass.StrictDictionary",
+        "detail": "typing_extensions",
+        "documentation": {}
+    },
+    {
+        "label": "StrictList",
+        "importPath": "better_dataclass",
+        "description": "better_dataclass",
+        "isExtraImport": true,
+        "detail": "better_dataclass",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
@@ -448,92 +384,29 @@
         "documentation": {}
     },
     {
-        "label": "SD",
+        "label": "StrictList",
+        "kind": 6,
+        "importPath": "better_dataclass.StrictList",
+        "description": "better_dataclass.StrictList",
+        "peekOfCode": "class StrictList(list):\n    \"\"\"\n    \"\"\"\n    def __init__(self,*data) -> None:\n        for each in data:\n            if not self.restriction(each):\n                raise ValueError(f\"Data does not follow restrictions set for {self.__class__}\")\n            if any(not validate(annot=t, value=each) for t in self.types):\n                raise TypeError(f'value {each} is not of type {self.types}. It\\'s of type {type(each)} ')\n            super().__init__(data)",
+        "detail": "better_dataclass.StrictList",
+        "documentation": {}
+    },
+    {
+        "label": "EmailList",
         "kind": 6,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "class SD(StrictDictionary):\n    a: int\n    b: int\n    c: str\nclass NestedSD(StrictDictionary):\n    name: str\n    values: List\nclass Data(StrictDictionary):\n    d1:Union[int,float]\n    d2:Optional[int]",
+        "peekOfCode": "class EmailList(StrictList):\n    def restriction(self, value):\n        email_regex = r'^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$'\n        return bool(re.match(email_regex, str(value)))\n# Create an instance of the EmailList\nemails = EmailList()\n# Add email values\nemails.append('john@example.com')\nemails.append('jane@example.com')\nemails.append('invalid_email')",
         "detail": "test",
         "documentation": {}
     },
     {
-        "label": "NestedSD",
-        "kind": 6,
+        "label": "emails",
+        "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "class NestedSD(StrictDictionary):\n    name: str\n    values: List\nclass Data(StrictDictionary):\n    d1:Union[int,float]\n    d2:Optional[int]\n    d3:Union[List[List[int]],Tuple]\n    d4:Literal['Hey','Fine']\n    d5:Final[int]=10\nclass ComplexSD(StrictDictionary):",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "Data",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class Data(StrictDictionary):\n    d1:Union[int,float]\n    d2:Optional[int]\n    d3:Union[List[List[int]],Tuple]\n    d4:Literal['Hey','Fine']\n    d5:Final[int]=10\nclass ComplexSD(StrictDictionary):\n    x=99.0\n    y: float\n    Un:Union[str,List]",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "ComplexSD",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class ComplexSD(StrictDictionary):\n    x=99.0\n    y: float\n    Un:Union[str,List]\n    nested: NestedSD\n    d:Data\n# check if Union> get args > get args  \nclass XX(Enum):\n    Data=2\n    Data2=3",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "XX",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class XX(Enum):\n    Data=2\n    Data2=3\n    Data3=\"3\"\nclass X:\n    s:Union[str,int]\n    t:XX\ns=ComplexSD()\nprint(s.__raw__())\ns.nested.name='323'",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "X",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class X:\n    s:Union[str,int]\n    t:XX\ns=ComplexSD()\nprint(s.__raw__())\ns.nested.name='323'\ns.nested.values=['323']\n# SECTION\nclass Testing(StrictDictionary):\n    Integer:int",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "Testing",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class Testing(StrictDictionary):\n    Integer:int\n    IntList:List[int]\n    IFList:List[Union[int,float]]\n    UFInt:Union[int,float]\n    Union2:Union[int,List[float]]\n    Optional:Optional[int]\nx={\n    \"Integer\":0,\n    \"IntList\":[0],",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "s",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class s(Enum):\n    a=1\n    b=2\nclass B:\n    s:Enum\n# print(get_args(dict))\n# print(type({\"4\":\"d\",5:\"ffd\"})==typing.Dict[int,str])\n# from better_dataclass.helper.initiate import initialize\nclass T2(StrictDictionary):\n    a:int",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "B",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class B:\n    s:Enum\n# print(get_args(dict))\n# print(type({\"4\":\"d\",5:\"ffd\"})==typing.Dict[int,str])\n# from better_dataclass.helper.initiate import initialize\nclass T2(StrictDictionary):\n    a:int\n    b:float\nob1=T2()\n# ob1.c=34.8",
-        "detail": "test",
-        "documentation": {}
-    },
-    {
-        "label": "T2",
-        "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class T2(StrictDictionary):\n    a:int\n    b:float\nob1=T2()\n# ob1.c=34.8\nprint(ob1)",
+        "peekOfCode": "emails = EmailList()\n# Add email values\nemails.append('john@example.com')\nemails.append('jane@example.com')\nemails.append('invalid_email')\n# Print the list\nprint(emails)",
         "detail": "test",
         "documentation": {}
     }
