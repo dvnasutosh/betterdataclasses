@@ -1,3 +1,4 @@
+
 # betterdataclass
 
 `betterdataclass` is a Python library that enhances the functionality of the existing `dataclass` system. It provides additional features and improvements to make working with data classes even better.
@@ -284,7 +285,7 @@ emails.append('invalid_email')  # Throws error
 # Print the list
 print(emails)
 ```
-# Roadmap
+## Roadmap
 - Make Validation decorators
 - Make StrictDictionary comply with Enum
 - Make it work with other dataclasses
