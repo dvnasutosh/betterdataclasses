@@ -286,8 +286,8 @@ emails.append('invalid_email')  # Throws error
 print(emails)
 ```
 ## Roadmap
-- Make Validation decorators
-- Make StrictDictionary comply with Enum
-- Make it work with other dataclasses
+- [ ] Make Validation decorators
+- [ ] Make StrictDictionary comply with Enum
+- [ ] Make it work with other dataclasses
 
 **The Long and the short is I want generalise all the dataclass options we got** 
