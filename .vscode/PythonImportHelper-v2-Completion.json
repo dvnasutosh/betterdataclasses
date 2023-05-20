@@ -265,6 +265,78 @@
         "documentation": {}
     },
     {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "json",
         "kind": 6,
         "isExtraImport": true,
@@ -275,34 +347,74 @@
     },
     {
         "label": "to_raw_dict",
-        "importPath": "better_dataclass.helper.to_dict",
-        "description": "better_dataclass.helper.to_dict",
+        "importPath": "betterdataclass.helper.to_dict",
+        "description": "betterdataclass.helper.to_dict",
         "isExtraImport": true,
-        "detail": "better_dataclass.helper.to_dict",
+        "detail": "betterdataclass.helper.to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "to_raw_dict",
+        "importPath": "betterdataclass.helper.to_dict",
+        "description": "betterdataclass.helper.to_dict",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.to_dict",
         "documentation": {}
     },
     {
         "label": "validate",
-        "importPath": "better_dataclass.helper.validate",
-        "description": "better_dataclass.helper.validate",
+        "importPath": "betterdataclass.helper.validate",
+        "description": "betterdataclass.helper.validate",
         "isExtraImport": true,
-        "detail": "better_dataclass.helper.validate",
+        "detail": "betterdataclass.helper.validate",
         "documentation": {}
     },
     {
         "label": "validate",
-        "importPath": "better_dataclass.helper.validate",
-        "description": "better_dataclass.helper.validate",
+        "importPath": "betterdataclass.helper.validate",
+        "description": "betterdataclass.helper.validate",
         "isExtraImport": true,
-        "detail": "better_dataclass.helper.validate",
+        "detail": "betterdataclass.helper.validate",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "betterdataclass.helper.validate",
+        "description": "betterdataclass.helper.validate",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.validate",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "betterdataclass.helper.validate",
+        "description": "betterdataclass.helper.validate",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.validate",
         "documentation": {}
     },
     {
         "label": "initialize",
-        "importPath": "better_dataclass.helper.initiate",
-        "description": "better_dataclass.helper.initiate",
+        "importPath": "betterdataclass.helper.initiate",
+        "description": "betterdataclass.helper.initiate",
         "isExtraImport": true,
-        "detail": "better_dataclass.helper.initiate",
+        "detail": "betterdataclass.helper.initiate",
+        "documentation": {}
+    },
+    {
+        "label": "initialize",
+        "importPath": "betterdataclass.helper.initiate",
+        "description": "betterdataclass.helper.initiate",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.initiate",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
         "documentation": {}
     },
     {
@@ -322,92 +434,100 @@
         "documentation": {}
     },
     {
-        "label": "StrictList",
-        "importPath": "better_dataclass",
-        "description": "better_dataclass",
+        "label": "SupportsIndex",
+        "importPath": "typing_extensions",
+        "description": "typing_extensions",
         "isExtraImport": true,
-        "detail": "better_dataclass",
+        "detail": "typing_extensions",
         "documentation": {}
     },
     {
-        "label": "re",
-        "kind": 6,
+        "label": "setup",
+        "importPath": "setuptools",
+        "description": "setuptools",
         "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "detail": "setuptools",
         "documentation": {}
     },
     {
         "label": "initialize",
         "kind": 2,
-        "importPath": "better_dataclass.helper.initiate",
-        "description": "better_dataclass.helper.initiate",
+        "importPath": "betterdataclass.helper.initiate",
+        "description": "betterdataclass.helper.initiate",
         "peekOfCode": "def initialize(annot: Type) -> Any:\n    # handling Union\n    if get_origin(annot)== Optional or type(None) in get_args(annot):\n        return None\n    if get_origin(annot) == Union:\n        return initialize(get_args(annot)[0])\n    elif get_origin(annot) in (List,list):\n        return []\n    elif get_origin(annot) in (Dict,dict):\n        return {}",
-        "detail": "better_dataclass.helper.initiate",
+        "detail": "betterdataclass.helper.initiate",
         "documentation": {}
     },
     {
         "label": "to_raw_dict",
         "kind": 2,
-        "importPath": "better_dataclass.helper.to_dict",
-        "description": "better_dataclass.helper.to_dict",
+        "importPath": "betterdataclass.helper.to_dict",
+        "description": "betterdataclass.helper.to_dict",
         "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = {}\n        for key, value in obj.items():\n            if isinstance(value, dict):",
-        "detail": "better_dataclass.helper.to_dict",
+        "detail": "betterdataclass.helper.to_dict",
         "documentation": {}
     },
     {
         "label": "validate",
         "kind": 2,
-        "importPath": "better_dataclass.helper.validate",
-        "description": "better_dataclass.helper.validate",
+        "importPath": "betterdataclass.helper.validate",
+        "description": "betterdataclass.helper.validate",
         "peekOfCode": "def validate(annot:Type,value):  # sourcery skip: low-code-quality\n    if type(value) in (annot,get_origin(annot)) : \n        return True\n    if annot==Any or get_origin(annot)==Any:\n        return True\n    # Check Union\n    if get_origin(annot) in (Union, Optional):\n        return any(validate(args,value) for args in get_args(annot))\n    sequentialList=[List,Tuple,Set]\n    if annot in sequentialList or get_origin(annot) in [get_origin(sq) for sq in sequentialList]:",
-        "detail": "better_dataclass.helper.validate",
+        "detail": "betterdataclass.helper.validate",
         "documentation": {}
     },
     {
         "label": "Dictionary",
         "kind": 6,
-        "importPath": "better_dataclass.StrictDictionary",
-        "description": "better_dataclass.StrictDictionary",
+        "importPath": "betterdataclass.StrictDictionary",
+        "description": "betterdataclass.StrictDictionary",
         "peekOfCode": "class Dictionary(object):\n    \"\"\"\n    A class that can be used to create a dictionary-like object with arbitrary key-value pairs.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initializes the object with the given keyword arguments.\n        If no arguments are given, the attributes are set to `None`.\n        \"\"\"\n        # Iterate over the class annotations and set the attributes",
-        "detail": "better_dataclass.StrictDictionary",
+        "detail": "betterdataclass.StrictDictionary",
         "documentation": {}
     },
     {
         "label": "StrictDictionary",
         "kind": 6,
-        "importPath": "better_dataclass.StrictDictionary",
-        "description": "better_dataclass.StrictDictionary",
+        "importPath": "betterdataclass.StrictDictionary",
+        "description": "betterdataclass.StrictDictionary",
         "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    precaution: dont use Enum. Cant be converted into JSON \n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values",
-        "detail": "better_dataclass.StrictDictionary",
+        "detail": "betterdataclass.StrictDictionary",
         "documentation": {}
     },
     {
         "label": "StrictList",
         "kind": 6,
-        "importPath": "better_dataclass.StrictList",
-        "description": "better_dataclass.StrictList",
+        "importPath": "betterdataclass.StrictList",
+        "description": "betterdataclass.StrictList",
         "peekOfCode": "class StrictList(list):\n    \"\"\"\n    \"\"\"\n    def __init__(self,*data) -> None:\n        for each in data:\n            if not self.restriction(each):\n                raise ValueError(f\"Data does not follow restrictions set for {self.__class__}\")\n            if any(not validate(annot=t, value=each) for t in self.types):\n                raise TypeError(f'value {each} is not of type {self.types}. It\\'s of type {type(each)} ')\n            super().__init__(data)",
-        "detail": "better_dataclass.StrictList",
+        "detail": "betterdataclass.StrictList",
         "documentation": {}
     },
     {
-        "label": "EmailList",
+        "label": "Dictionary",
         "kind": 6,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "class EmailList(StrictList):\n    def restriction(self, value):\n        email_regex = r'^[\\w\\.-]+@[\\w\\.-]+\\.\\w+$'\n        return bool(re.match(email_regex, str(value)))\n# Create an instance of the EmailList\nemails = EmailList()\n# Add email values\nemails.append('john@example.com')\nemails.append('jane@example.com')\nemails.append('invalid_email')",
-        "detail": "test",
+        "importPath": "build.lib.betterdataclass.StrictDictionary",
+        "description": "build.lib.betterdataclass.StrictDictionary",
+        "peekOfCode": "class Dictionary(object):\n    \"\"\"\n    A class that can be used to create a dictionary-like object with arbitrary key-value pairs.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initializes the object with the given keyword arguments.\n        If no arguments are given, the attributes are set to `None`.\n        \"\"\"\n        # Iterate over the class annotations and set the attributes",
+        "detail": "build.lib.betterdataclass.StrictDictionary",
         "documentation": {}
     },
     {
-        "label": "emails",
-        "kind": 5,
-        "importPath": "test",
-        "description": "test",
-        "peekOfCode": "emails = EmailList()\n# Add email values\nemails.append('john@example.com')\nemails.append('jane@example.com')\nemails.append('invalid_email')\n# Print the list\nprint(emails)",
-        "detail": "test",
+        "label": "StrictDictionary",
+        "kind": 6,
+        "importPath": "build.lib.betterdataclass.StrictDictionary",
+        "description": "build.lib.betterdataclass.StrictDictionary",
+        "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    precaution: dont use Enum. Cant be converted into JSON \n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values",
+        "detail": "build.lib.betterdataclass.StrictDictionary",
+        "documentation": {}
+    },
+    {
+        "label": "StrictList",
+        "kind": 6,
+        "importPath": "build.lib.betterdataclass.StrictList",
+        "description": "build.lib.betterdataclass.StrictList",
+        "peekOfCode": "class StrictList(list):\n    \"\"\"\n    \"\"\"\n    def __init__(self,*data) -> None:\n        for each in data:\n            if not self.restriction(each):\n                raise ValueError(f\"Data does not follow restrictions set for {self.__class__}\")\n            if any(not validate(annot=t, value=each) for t in self.types):\n                raise TypeError(f'value {each} is not of type {self.types}. It\\'s of type {type(each)} ')\n            super().__init__(data)",
+        "detail": "build.lib.betterdataclass.StrictList",
         "documentation": {}
     }
 ]
