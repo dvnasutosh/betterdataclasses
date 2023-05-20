@@ -22,6 +22,19 @@ You can install `betterdataclass` using pip:
 ```shell
     pip install betterdataclass
 ```
+## **Restrictions**
+- Accepted typing Types
+  - `Union`
+  - `Optional`
+  - `Final`
+  - `Dict`
+  - `Tuple`
+  - `Set`
+  - `List`
+  - `Literal`
+  - *anything that `typing.get_origin()` 1 times leads to the aforementioned types or the default generic types*
+-  Can't produce JSON file out of `Enum`  but it is accepted.
+
 
 ## **Usage Example- StrictDictionary**
 
@@ -271,3 +284,9 @@ emails.append('invalid_email')  # Throws error
 # Print the list
 print(emails)
 ```
+# Roadmap
+- Make Validation decorators
+- Make StrictDictionary comply with Enum
+- Make it work with other dataclasses
+
+**The Long and the short is I want generalise all the dataclass options we got** 
