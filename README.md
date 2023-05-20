@@ -33,8 +33,8 @@ You can install `betterdataclass` using pip:
   - `List`
   - `Literal`
   - *anything that `typing.get_origin()` 1 times leads to the aforementioned types or the default generic types*
--  Can't produce JSON file out of `Enum`  but it is accepted.
-
+-  Can't produce JSON file out of `Enum`,  but it is accepted.
+-  Can't add data members post *class defination*, i.e. in *runtime*.
 
 ## **Usage Example- StrictDictionary**
 
@@ -261,7 +261,7 @@ numbers.append(4)
 print(numbers)      # Output: [1, 2, 3.14, 4]
 
 ```
-### Validation usage example
+### **Validation usage `StrictList` example**
 ```Python
 from betterdataclass import StrictList
 import re
