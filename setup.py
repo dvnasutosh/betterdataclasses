@@ -6,7 +6,7 @@ setup(
     long_description="`betterdataclass` is a Python library that enhances the functionality of the existing `dataclass` system. It provides additional features and improvements to make working with data classes even better.",
     author="Asutosh Rath",
     author_email="dvnasutosh@gmail.com",
-    packages=['betterdataclass'],
+    packages=['betterdataclass','betterdataclass.helper'],
         classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
