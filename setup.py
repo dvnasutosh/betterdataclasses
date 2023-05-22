@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="betterdataclass",
-    version="200.4",
+    version="202.4",
     description="A multipurpose dataclass libarary used for validation and data structuring.",
     long_description="Go to github.com/dvnasutosh/betterdataclasses",
     url='https://github.com/dvnasutosh/betterdataclasses',
