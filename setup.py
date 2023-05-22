@@ -1,9 +1,14 @@
 from setuptools import setup
+f=open("./README.md",'r')
+readme=f.readlines()
+
 setup(
     name="betterdataclass",
-    version="2.01",
+    version="2.02",
     description="A multipurpose dataclass libarary used for validation and data structuring.",
-    long_description="`betterdataclass` is a Python library that enhances the functionality of the existing `dataclass` system. It provides additional features and improvements to make working with data classes even better.",
+    long_description="\n".join(readme),
+    url='https://github.com/dvnasutosh/betterdataclasses',
+    
     author="Asutosh Rath",
     author_email="dvnasutosh@gmail.com",
     packages=['betterdataclass','betterdataclass.helper'],
