@@ -1,12 +1,12 @@
 from setuptools import setup
 f=open("./README.md",'r')
 readme=f.readlines()
-
+print(readme)
 setup(
     name="betterdataclass",
-    version="2.02",
+    version="2.04",
     description="A multipurpose dataclass libarary used for validation and data structuring.",
-    long_description="\n".join(readme),
+    long_description="".join(readme),
     url='https://github.com/dvnasutosh/betterdataclasses',
     
     author="Asutosh Rath",
