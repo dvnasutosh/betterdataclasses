@@ -17,6 +17,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -265,6 +273,182 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "get_args",
         "importPath": "typing",
         "description": "typing",
@@ -501,6 +685,33 @@
         "description": "betterdataclass.StrictList",
         "peekOfCode": "class StrictList(list):\n    \"\"\"\n    \"\"\"\n    def __init__(self,*data) -> None:\n        for each in data:\n            if not self.restriction(each):\n                raise ValueError(f\"Data does not follow restrictions set for {self.__class__}\")\n            if any(not validate(annot=t, value=each) for t in self.types):\n                raise TypeError(f'value {each} is not of type {self.types}. It\\'s of type {type(each)} ')\n            super().__init__(data)",
         "detail": "betterdataclass.StrictList",
+        "documentation": {}
+    },
+    {
+        "label": "initialize",
+        "kind": 2,
+        "importPath": "build.lib.betterdataclass.helper.initiate",
+        "description": "build.lib.betterdataclass.helper.initiate",
+        "peekOfCode": "def initialize(annot: Type) -> Any:\n    # handling Union\n    if get_origin(annot)== Optional or type(None) in get_args(annot):\n        return None\n    if get_origin(annot) == Union:\n        return initialize(get_args(annot)[0])\n    elif get_origin(annot) in (List,list):\n        return []\n    elif get_origin(annot) in (Dict,dict):\n        return {}",
+        "detail": "build.lib.betterdataclass.helper.initiate",
+        "documentation": {}
+    },
+    {
+        "label": "to_raw_dict",
+        "kind": 2,
+        "importPath": "build.lib.betterdataclass.helper.to_dict",
+        "description": "build.lib.betterdataclass.helper.to_dict",
+        "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = {}\n        for key, value in obj.items():\n            if isinstance(value, dict):",
+        "detail": "build.lib.betterdataclass.helper.to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "kind": 2,
+        "importPath": "build.lib.betterdataclass.helper.validate",
+        "description": "build.lib.betterdataclass.helper.validate",
+        "peekOfCode": "def validate(annot:Type,value):  # sourcery skip: low-code-quality\n    if type(value) in (annot,get_origin(annot)) : \n        return True\n    if annot==Any or get_origin(annot)==Any:\n        return True\n    # Check Union\n    if get_origin(annot) in (Union, Optional):\n        return any(validate(args,value) for args in get_args(annot))\n    sequentialList=[List,Tuple,Set]\n    if annot in sequentialList or get_origin(annot) in [get_origin(sq) for sq in sequentialList]:",
+        "detail": "build.lib.betterdataclass.helper.validate",
         "documentation": {}
     },
     {

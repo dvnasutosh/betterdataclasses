@@ -4,3 +4,4 @@ build
 dist
 betterdataclass.egg-info
 test.py
+.vscode/*
