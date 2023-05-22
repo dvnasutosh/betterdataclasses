@@ -1,7 +1,8 @@
 from collections.abc import Iterable
 from typing_extensions import SupportsIndex
-from .helper.validate import validate
 from typing import Any
+
+from .helper.validate import validate
 
 class StrictList(list):
     """

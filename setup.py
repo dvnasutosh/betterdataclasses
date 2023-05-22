@@ -1,15 +1,17 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
 setup(
     name="betterdataclass",
-    version="2.4",
+    version="200.4",
     description="A multipurpose dataclass libarary used for validation and data structuring.",
     long_description="Go to github.com/dvnasutosh/betterdataclasses",
     url='https://github.com/dvnasutosh/betterdataclasses',
     
     author="Asutosh Rath",
     author_email="dvnasutosh@gmail.com",
-    packages=['betterdataclass','betterdataclass.helper','betterdataclass.StrictDictonary','betterdataclass.StrictList'],
+    packages=find_packages(),
+    
+    
         classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
@@ -23,3 +25,16 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
     ]
 )
+
+'''
+My directory setup
+betterdataclasses(projectfolder)
+--betterdataclass(libraryfolder)
+----StrictDictionary.py
+----StrictList.py
+----__init__.py
+----helper
+------initiate.py
+------validate.py
+------to_dictr.py
+'''
