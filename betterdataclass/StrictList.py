@@ -1,6 +1,6 @@
 from collections.abc import Iterable
 from typing_extensions import SupportsIndex
-from betterdataclass.helper.validate import validate
+from .helper.validate import validate
 from typing import Any
 
 class StrictList(list):

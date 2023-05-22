@@ -2,9 +2,9 @@
 from typing import get_args, get_args, get_args, Final, Final, Final, Any,get_origin
 
 import json
-from betterdataclass.helper.to_dict import to_raw_dict
-from betterdataclass.helper.validate import validate
-from betterdataclass.helper.initiate import initialize
+from .helper.to_dict import to_raw_dict
+from .helper.validate import validate
+from .helper.initiate import initialize
 
 class Dictionary(object):
     """

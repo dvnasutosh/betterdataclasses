@@ -530,70 +530,6 @@
         "documentation": {}
     },
     {
-        "label": "to_raw_dict",
-        "importPath": "betterdataclass.helper.to_dict",
-        "description": "betterdataclass.helper.to_dict",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.to_dict",
-        "documentation": {}
-    },
-    {
-        "label": "to_raw_dict",
-        "importPath": "betterdataclass.helper.to_dict",
-        "description": "betterdataclass.helper.to_dict",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.to_dict",
-        "documentation": {}
-    },
-    {
-        "label": "validate",
-        "importPath": "betterdataclass.helper.validate",
-        "description": "betterdataclass.helper.validate",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.validate",
-        "documentation": {}
-    },
-    {
-        "label": "validate",
-        "importPath": "betterdataclass.helper.validate",
-        "description": "betterdataclass.helper.validate",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.validate",
-        "documentation": {}
-    },
-    {
-        "label": "validate",
-        "importPath": "betterdataclass.helper.validate",
-        "description": "betterdataclass.helper.validate",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.validate",
-        "documentation": {}
-    },
-    {
-        "label": "validate",
-        "importPath": "betterdataclass.helper.validate",
-        "description": "betterdataclass.helper.validate",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.validate",
-        "documentation": {}
-    },
-    {
-        "label": "initialize",
-        "importPath": "betterdataclass.helper.initiate",
-        "description": "betterdataclass.helper.initiate",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.initiate",
-        "documentation": {}
-    },
-    {
-        "label": "initialize",
-        "importPath": "betterdataclass.helper.initiate",
-        "description": "betterdataclass.helper.initiate",
-        "isExtraImport": true,
-        "detail": "betterdataclass.helper.initiate",
-        "documentation": {}
-    },
-    {
         "label": "Iterable",
         "importPath": "collections.abc",
         "description": "collections.abc",
@@ -623,6 +559,38 @@
         "description": "typing_extensions",
         "isExtraImport": true,
         "detail": "typing_extensions",
+        "documentation": {}
+    },
+    {
+        "label": "to_raw_dict",
+        "importPath": "betterdataclass.helper.to_dict",
+        "description": "betterdataclass.helper.to_dict",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "betterdataclass.helper.validate",
+        "description": "betterdataclass.helper.validate",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.validate",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "importPath": "betterdataclass.helper.validate",
+        "description": "betterdataclass.helper.validate",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.validate",
+        "documentation": {}
+    },
+    {
+        "label": "initialize",
+        "importPath": "betterdataclass.helper.initiate",
+        "description": "betterdataclass.helper.initiate",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.initiate",
         "documentation": {}
     },
     {
