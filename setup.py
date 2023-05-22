@@ -2,14 +2,14 @@ from setuptools import setup
 
 setup(
     name="betterdataclass",
-    version="2.3",
+    version="2.31",
     description="A multipurpose dataclass libarary used for validation and data structuring.",
     long_description="Go to github.com/dvnasutosh/betterdataclasses",
     url='https://github.com/dvnasutosh/betterdataclasses',
     
     author="Asutosh Rath",
     author_email="dvnasutosh@gmail.com",
-    packages=['betterdataclass','betterdataclass.helper'],
+    packages=['betterdataclass','betterdataclass.helper','betterdataclass.StrictDictonary','betterdataclass.StrictList'],
         classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
