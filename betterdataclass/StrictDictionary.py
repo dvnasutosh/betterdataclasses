@@ -1,5 +1,6 @@
 
-from typing import get_args, get_args, get_args, Final, Final, Final, Any,get_origin
+from typing import get_args,get_origin
+from typing import Final, Any
 
 import json
 from .helper.to_dict import to_raw_dict
@@ -99,7 +100,6 @@ class StrictDictionary(Dictionary):
         
         for k,v in cls.__dict__.items():
             if len(k)>=2 and k[0]!='_' and k[1]!='_':
-                print("hello")
                 # Handling when it is present in dict but not in annot.(It will default to What is provided)
                 if k not in cls.__annotations__:
                     pass
