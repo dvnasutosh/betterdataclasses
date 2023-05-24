@@ -93,7 +93,7 @@ class StrictDictionary(Dictionary):
                 #!SECTION
                 
                 super().__setitem__(i,j)
-                # NOTE: If it is in data AND NOT IN annot than 
+
     
     def __init_subclass__(cls) -> None:
         cls.__data__= {}
