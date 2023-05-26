@@ -40,12 +40,12 @@ class Dictionary(object):
     def __str__(self):
         return str(self.__raw__())
 
-    def __json__(self):
+    def __json__(self)->str:
         return json.dumps(self.__raw__())
     
     def __raw__(self):
         # print(type(self.__data__['nested']))
-        return (self.__data__)
+        return to_raw_dict(self.__data__)
 
     def __setitem__(self, name, value) -> None:
         """

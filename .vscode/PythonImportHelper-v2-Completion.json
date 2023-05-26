@@ -201,31 +201,7 @@
         "documentation": {}
     },
     {
-        "label": "get_args",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "get_args",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Final",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Final",
+        "label": "get_origin",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -242,6 +218,14 @@
     },
     {
         "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -271,6 +255,14 @@
         "importPath": "json",
         "description": "json",
         "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "StrictDictionary",
+        "importPath": "betterdataclass",
+        "description": "betterdataclass",
+        "isExtraImport": true,
+        "detail": "betterdataclass",
         "documentation": {}
     },
     {
@@ -348,6 +340,42 @@
         "description": "betterdataclass.StrictDictionary",
         "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    precaution: dont use Enum. Cant be converted into JSON \n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values",
         "detail": "betterdataclass.StrictDictionary",
+        "documentation": {}
+    },
+    {
+        "label": "EnumMember",
+        "kind": 6,
+        "importPath": "betterdataclass.strictEnum",
+        "description": "betterdataclass.strictEnum",
+        "peekOfCode": "class EnumMember:\n    def __init__(self) -> None:\n        pass\nclass StrictEnum:\n    def __init__(self,type) -> None:\n        pass\n    def __init_subclass__(cls,Ttype) -> None:\n        # for key, value in cls.__dict__:\n        #     pass\n        pass",
+        "detail": "betterdataclass.strictEnum",
+        "documentation": {}
+    },
+    {
+        "label": "StrictEnum",
+        "kind": 6,
+        "importPath": "betterdataclass.strictEnum",
+        "description": "betterdataclass.strictEnum",
+        "peekOfCode": "class StrictEnum:\n    def __init__(self,type) -> None:\n        pass\n    def __init_subclass__(cls,Ttype) -> None:\n        # for key, value in cls.__dict__:\n        #     pass\n        pass\n\"\"\"\n\"\"\"\nclass x(StrictEnum):",
+        "detail": "betterdataclass.strictEnum",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 6,
+        "importPath": "betterdataclass.strictEnum",
+        "description": "betterdataclass.strictEnum",
+        "peekOfCode": "class x(StrictEnum):\n    d=\"sdsd\"\n    d2=\"fff\"\nclass y(StrictDictionary):\n    tyi:x\nx=y()\nx.tyi=\"Something\"",
+        "detail": "betterdataclass.strictEnum",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 6,
+        "importPath": "betterdataclass.strictEnum",
+        "description": "betterdataclass.strictEnum",
+        "peekOfCode": "class y(StrictDictionary):\n    tyi:x\nx=y()\nx.tyi=\"Something\"",
+        "detail": "betterdataclass.strictEnum",
         "documentation": {}
     },
     {
