@@ -282,6 +282,15 @@
         "documentation": {}
     },
     {
+        "label": "setuptools",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "setuptools",
+        "description": "setuptools",
+        "detail": "setuptools",
+        "documentation": {}
+    },
+    {
         "label": "find_packages",
         "importPath": "setuptools",
         "description": "setuptools",
