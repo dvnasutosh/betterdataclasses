@@ -30,14 +30,16 @@ def to_raw_dict(obj: object, processed=None):
             else:
                 out[key] = str(value)
         return out
+    elif obj is None:
+        return obj
     elif isinstance(obj, (list, tuple, set)):
         return [to_raw_dict(item, processed) for item in obj]
     elif isinstance(obj, (int, float, bool, complex, str)):
         return obj
     elif isinstance(obj, Enum):
-        return [str(value), value.value]
-    elif isinstance(value,StrictDictionary.StrictDictionary):
-        out[key] = to_raw_dict(value.__data__, processed)
+        return [str(obj), obj.value]
+    elif isinstance(obj,StrictDictionary.StrictDictionary):
+        return to_raw_dict(obj.__data__, processed)
     elif isinstance(obj, object):
         return to_raw_dict(obj.__dict__, processed)
     else:
