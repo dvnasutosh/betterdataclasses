@@ -1,7 +1,7 @@
-from ast import Str
 from enum import Enum
 
-from betterdataclass import StrictDictionary
+
+from ..StrictDictionary import StrictDictionary
 
 
 def to_raw_dict(obj: object, processed=None):
@@ -23,7 +23,7 @@ def to_raw_dict(obj: object, processed=None):
                 out[key] = to_raw_dict(value, processed)
             elif isinstance(value, (int, float, bool, complex, str)):
                 out[key] = value
-            elif isinstance(value,StrictDictionary.StrictDictionary):
+            elif isinstance(value,StrictDictionary):
                 out[key] = to_raw_dict(value.__data__, processed)
             elif isinstance(value, object):
                 out[key] = to_raw_dict(value.__dict__, processed)

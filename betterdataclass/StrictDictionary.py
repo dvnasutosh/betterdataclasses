@@ -3,7 +3,7 @@ from typing import get_args,get_origin
 from typing import Final, Any
 
 import json
-from .helper.to_dict import to_raw_dict
+
 from .helper.validate import validate
 from .helper.initiate import initialize
 
@@ -45,6 +45,7 @@ class Dictionary(object):
     
     def __raw__(self):
         # print(type(self.__data__['nested']))
+        from .helper.to_dict import to_raw_dict
         return to_raw_dict(self.__data__)
 
     def __setitem__(self, name, value) -> None:
