@@ -4,7 +4,7 @@ import setuptools
 
 setup(
     name="betterdataclass",
-    version="3.03",
+    version="4.0",
     description="A multipurpose dataclass libarary used for validation and data structuring.",
     long_description=open('./README.rst').read(),
     url='https://github.com/dvnasutosh/betterdataclasses',
