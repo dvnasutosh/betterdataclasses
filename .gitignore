@@ -5,3 +5,4 @@ dist
 betterdataclass.egg-info
 test.py
 .vscode/PythonImportHelper-v2-Completion.json
+test/*
