@@ -7,7 +7,6 @@ from ..StrictDictionary import StrictDictionary
 
 
 def to_raw_dict(obj: object):
-    processed.add(id(obj))
     if isinstance(obj, dict):
         out = {}
         for key, value in obj.items():
