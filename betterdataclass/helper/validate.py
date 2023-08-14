@@ -4,8 +4,15 @@ from typing import Any, Final, Literal, Union, Optional, Tuple, List, Set, Type,
 
 def validate(annot:Type,value):  # sourcery skip: low-code-quality
     if type(value) in (annot,get_origin(annot)) : 
-
         return True
+
+    if issubclass(type(value),Union[annot,get_origin(annot)]):
+        print('Dragon'*100)
+        return True
+
+    if isinstance(value , get_origin(annot ) or annot):
+        return True
+    
     if annot==Any or get_origin(annot)==Any:
         return True
 
@@ -15,18 +22,18 @@ def validate(annot:Type,value):  # sourcery skip: low-code-quality
 
 
     sequentialList=[List,Tuple,Set]
-    
-  
+
+
     if annot in sequentialList or get_origin(annot) in [get_origin(sq) for sq in sequentialList]:
         if type(value) not in (
             get_origin(annot),
             get_origin(get_origin(annot)),
         ):
             return False
-        
+
         listValid = [validate(get_args(annot)[0],each) for each in value]
         return all(listValid)
-    
+
     if get_origin(annot) == Final:
         return False
 

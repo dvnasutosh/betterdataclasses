@@ -1,9 +1,8 @@
 
-from typing import get_args,get_origin
-from typing import Final, Any
+from typing import get_args, get_args, get_args, Final, Final, Final, Any,get_origin
 
 import json
-
+# from .helper.to_dict import to_raw_dict
 from .helper.validate import validate
 from .helper.initiate import initialize
 
@@ -22,11 +21,11 @@ class Dictionary(object):
             try:
                 self.__data__= getattr(self,i)
             except AttributeError:
-                self.__setattr__(i,None)
+                self.__data__[i]=None
         kwargs = kwargs or {}
 
         for i, j in kwargs.items():
-            self.__setattr__(i,j)
+            self.__data__[i] = j
         
     def __repr__(self) -> str:
         """
@@ -35,49 +34,40 @@ class Dictionary(object):
         return str(self.__raw__())
     
     def __call__(self,raw:bool=False) -> dict:
-        return self.__raw__() if raw else {
-            k: self.__dict__[k]
-            for k in self.__dict__
-            if not (len(k) > 1 and k[0] == k[1] == '_')
-        }
+        return self.__raw__() if raw else self.__data__
     
     def __str__(self):
         return str(self.__raw__())
 
-    def __json__(self)->str:
+    def __json__(self):
         return json.dumps(self.__raw__())
     
     def __raw__(self):
         # print(type(self.__data__['nested']))
         from .helper.to_dict import to_raw_dict
-        _data = {
-            k: self.__dict__[k]
-            for k in self.__dict__
-            if not (len(k) > 1 and k[0] == k[1] == '_')
-        }
-        return to_raw_dict(_data)
+        return to_raw_dict(self.__data__)
 
     def __setitem__(self, name, value) -> None:
         """
         Provides indexing and assignment functionality to the object.
         """
-        self.__setattr__(name,value)
+        self.__data__[name]=value
         
 
-    # def __setattr__(self, __name: str, __value: Any) -> None:
-    #     self.__data__[__name]=__value
+    def __setattr__(self, __name: str, __value: Any) -> None:
+        self.__data__[__name]=__value
     
-    # def __getattribute__(self, __name: str) -> Any:
-    #     if __name in super().__getattribute__("__data__").keys():
-    #         return super().__getattribute__('__data__')[__name]
-    #     else:
-    #         return super().__getattribute__(__name)
+    def __getattribute__(self, __name: str) -> Any:
+        if __name in super().__getattribute__("__data__").keys():
+            return super().__getattribute__('__data__')[__name]
+        else:
+            return super().__getattribute__(__name)
     
     def __getitem__(self, name) -> Any:
         """
         Provides indexing and retrieval functionality to the object.
         """
-        return self.__getattribute__(name)
+        return self.__data__[name]
 
 class StrictDictionary(Dictionary):
     """
@@ -102,8 +92,8 @@ class StrictDictionary(Dictionary):
                         f'{i} key has a value {j} which is of type {type(j)}. {self.__annotations__[i]} expected.')
                 #!SECTION
                 
-                super().__setattr__(i,j)
-
+                super().__setitem__(i,j)
+                # NOTE: If it is in data AND NOT IN annot than 
     
     def __init_subclass__(cls) -> None:
         cls.__data__= {}
@@ -114,7 +104,7 @@ class StrictDictionary(Dictionary):
                 if k not in cls.__annotations__:
                     pass
                 elif Final == cls.__annotations__[k]:
-                    pass
+                    pass         
                 elif Final == get_origin(cls.__annotations__[k]):
                     if not validate(get_args(cls.__annotations__[k])[0],v):
                         raise ValueError(f"{v} is not of type {get_args(cls.__annotations__[k])[0]}")
@@ -138,7 +128,7 @@ class StrictDictionary(Dictionary):
             raise TypeError(
                 f'{name} key has a value {value} which is of type {type(value)}. {self.__annotations__[name]} expected.')
 
-        super().__setattr__(name, value)
+        super().__setitem__(name, value)
 
     def __setitem__(self, name, value) -> None:
         """

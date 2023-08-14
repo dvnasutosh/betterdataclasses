@@ -13,8 +13,9 @@ def initialize(annot: Type) -> Any:
         return initialize(get_args(annot)[0])
     
     elif get_origin(annot) in (List,list):
+        data=[]
         return []
-    
+
     elif get_origin(annot) in (Dict,dict):
         return {}
     
@@ -32,8 +33,10 @@ def initialize(annot: Type) -> Any:
 
     elif annot is Any:
         return None
+    
     try:
         return annot()
+    
     except TypeError as e:
         raise ValueError(f"Unable to initialize value for annot: {annot}") from e
 

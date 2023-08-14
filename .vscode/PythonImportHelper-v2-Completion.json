@@ -17,6 +17,14 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -225,6 +233,78 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Type",
         "importPath": "typing",
         "description": "typing",
@@ -241,11 +321,203 @@
         "documentation": {}
     },
     {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_args",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_origin",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Final",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "filterDict",
+        "importPath": "betterdataclass.helper.filterObjectDict",
+        "description": "betterdataclass.helper.filterObjectDict",
+        "isExtraImport": true,
+        "detail": "betterdataclass.helper.filterObjectDict",
         "documentation": {}
     },
     {
@@ -258,11 +530,35 @@
         "documentation": {}
     },
     {
-        "label": "StrictDictionary",
-        "importPath": "betterdataclass",
-        "description": "betterdataclass",
+        "label": "dumps",
+        "importPath": "json",
+        "description": "json",
         "isExtraImport": true,
-        "detail": "betterdataclass",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "loads",
+        "importPath": "json",
+        "description": "json",
+        "isExtraImport": true,
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "dumps",
+        "importPath": "json",
+        "description": "json",
+        "isExtraImport": true,
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "loads",
+        "importPath": "json",
+        "description": "json",
+        "isExtraImport": true,
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -279,6 +575,80 @@
         "description": "typing_extensions",
         "isExtraImport": true,
         "detail": "typing_extensions",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "parse_qsl",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "parse_qsl",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "StrictDictionary",
+        "importPath": "betterdataclass.StrictDictionary",
+        "description": "betterdataclass.StrictDictionary",
+        "isExtraImport": true,
+        "detail": "betterdataclass.StrictDictionary",
+        "documentation": {}
+    },
+    {
+        "label": "StrictDictionary",
+        "importPath": "betterdataclass.StrictDictionary",
+        "description": "betterdataclass.StrictDictionary",
+        "isExtraImport": true,
+        "detail": "betterdataclass.StrictDictionary",
+        "documentation": {}
+    },
+    {
+        "label": "YouTube",
+        "importPath": "pytube",
+        "description": "pytube",
+        "isExtraImport": true,
+        "detail": "pytube",
         "documentation": {}
     },
     {
@@ -307,11 +677,20 @@
         "documentation": {}
     },
     {
+        "label": "filterDict",
+        "kind": 2,
+        "importPath": "betterdataclass.helper.filterObjectDict",
+        "description": "betterdataclass.helper.filterObjectDict",
+        "peekOfCode": "def filterDict(data:dict):\n    return {\n            k: data[k]\n            for k in data\n            if not (len(k) > 1 and k[0] == k[1] == '_')\n        }",
+        "detail": "betterdataclass.helper.filterObjectDict",
+        "documentation": {}
+    },
+    {
         "label": "initialize",
         "kind": 2,
         "importPath": "betterdataclass.helper.initiate",
         "description": "betterdataclass.helper.initiate",
-        "peekOfCode": "def initialize(annot: Type) -> Any:\n    # handling Union\n    if get_origin(annot)== Optional or type(None) in get_args(annot):\n        return None\n    if get_origin(annot) == Union:\n        return initialize(get_args(annot)[0])\n    elif get_origin(annot) in (List,list):\n        return []\n    elif get_origin(annot) in (Dict,dict):\n        return {}",
+        "peekOfCode": "def initialize(annot: Type) -> Any:\n    # handling Union\n    if get_origin(annot)== Optional or type(None) in get_args(annot):\n        return None\n    if get_origin(annot) == Union:\n        return initialize(get_args(annot)[0])\n    elif get_origin(annot) in (List,list):\n        data=[]\n        return []\n    elif get_origin(annot) in (Dict,dict):",
         "detail": "betterdataclass.helper.initiate",
         "documentation": {}
     },
@@ -320,7 +699,7 @@
         "kind": 2,
         "importPath": "betterdataclass.helper.to_dict",
         "description": "betterdataclass.helper.to_dict",
-        "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = {}\n        for key, value in obj.items():\n            if isinstance(value, dict):",
+        "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    if id(obj) in processed:\n        return \"<circular reference>\"\n    processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = {}\n        for key, value in obj.items():\n            if value is None:",
         "detail": "betterdataclass.helper.to_dict",
         "documentation": {}
     },
@@ -352,48 +731,255 @@
         "documentation": {}
     },
     {
-        "label": "EnumMember",
-        "kind": 6,
-        "importPath": "betterdataclass.strictEnum",
-        "description": "betterdataclass.strictEnum",
-        "peekOfCode": "class EnumMember:\n    def __init__(self) -> None:\n        pass\nclass StrictEnum:\n    def __init__(self,type) -> None:\n        pass\n    def __init_subclass__(cls,Ttype) -> None:\n        # for key, value in cls.__dict__:\n        #     pass\n        pass",
-        "detail": "betterdataclass.strictEnum",
-        "documentation": {}
-    },
-    {
-        "label": "StrictEnum",
-        "kind": 6,
-        "importPath": "betterdataclass.strictEnum",
-        "description": "betterdataclass.strictEnum",
-        "peekOfCode": "class StrictEnum:\n    def __init__(self,type) -> None:\n        pass\n    def __init_subclass__(cls,Ttype) -> None:\n        # for key, value in cls.__dict__:\n        #     pass\n        pass\n\"\"\"\n\"\"\"\nclass x(StrictEnum):",
-        "detail": "betterdataclass.strictEnum",
-        "documentation": {}
-    },
-    {
-        "label": "x",
-        "kind": 6,
-        "importPath": "betterdataclass.strictEnum",
-        "description": "betterdataclass.strictEnum",
-        "peekOfCode": "class x(StrictEnum):\n    d=\"sdsd\"\n    d2=\"fff\"\nclass y(StrictDictionary):\n    tyi:x\nx=y()\nx.tyi=\"Something\"",
-        "detail": "betterdataclass.strictEnum",
-        "documentation": {}
-    },
-    {
-        "label": "y",
-        "kind": 6,
-        "importPath": "betterdataclass.strictEnum",
-        "description": "betterdataclass.strictEnum",
-        "peekOfCode": "class y(StrictDictionary):\n    tyi:x\nx=y()\nx.tyi=\"Something\"",
-        "detail": "betterdataclass.strictEnum",
-        "documentation": {}
-    },
-    {
         "label": "StrictList",
         "kind": 6,
         "importPath": "betterdataclass.StrictList",
         "description": "betterdataclass.StrictList",
         "peekOfCode": "class StrictList(list):\n    \"\"\"\n    \"\"\"\n    def __init__(self,*data) -> None:\n        for each in data:\n            if not self.restriction(each):\n                raise ValueError(f\"Data does not follow restrictions set for {self.__class__}\")\n            if any(not validate(annot=t, value=each) for t in self.types):\n                raise TypeError(f'value {each} is not of type {self.types}. It\\'s of type {type(each)} ')\n            super().__init__(data)",
         "detail": "betterdataclass.StrictList",
+        "documentation": {}
+    },
+    {
+        "label": "Dictionary",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class Dictionary(object):\n    \"\"\"\n    A class that can be used to create a dictionary-like object with arbitrary key-value pairs.\n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initializes the object with the given keyword arguments.\n        If no arguments are given, the attributes are set to `None`.\n        \"\"\"\n        # Iterate over the class annotations and set the attributes",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "StrictDictionary",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class StrictDictionary(Dictionary):\n    \"\"\"\n    A subclass of `Dictionary` that enforces strict typing of the values based on the annotations of the class attributes.\n    precaution: dont use Enum. Cant be converted into JSON \n    \"\"\"\n    def __init__(self, **kwargs) -> None:\n        \"\"\"\n        Initialize any given data to be stored. The default datas are stored regardless \n        \"\"\"\n        # Adding default values",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "dateInt",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class dateInt(int):\n    \"\"\"\n        A subclass of int that stores a date in an integer format that represents \n        the date as the number of milliseconds since the Unix epoch (January 1, 1970).\n        Accepts date strings in the following formats:\n        - 'YYYY-MM-DD'\n        - 'MMM DD, YYYY'\n        - 'YYYY-MM-DDTHH:MM:SSZ'\n        - 'YYYY-MM-DDTHH:MM:SS.sssZ'\n        - 'YYYY-MM-DDTHH:MM:SS±HH:MM'",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "publishTime",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class publishTime(StrictDictionary):\n    publishedTimeText: str\n    since: Union[float,dateInt] # Just for test purpose other wise float only. float(time.time()) used here\nclass strbool(int):\n    def __new__(cls, value=bool()):\n        if isinstance(value, str):\n            if value.lower() == \"true\":\n                return super().__new__(cls, 1)\n            elif value.lower() == \"false\":\n                return super().__new__(cls, 0)",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "strbool",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class strbool(int):\n    def __new__(cls, value=bool()):\n        if isinstance(value, str):\n            if value.lower() == \"true\":\n                return super().__new__(cls, 1)\n            elif value.lower() == \"false\":\n                return super().__new__(cls, 0)\n        return super().__new__(cls, value)\nclass url(str):\n    def __new__(cls, url_string=str()):",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class url(str):\n    def __new__(cls, url_string=str()):\n        if not url_string:\n            obj = super().__new__(cls, url_string)\n            obj.query_params = {}\n            return obj\n        if not isinstance(url_string, str):\n            raise TypeError(\n                f\"Expected str, but got {type(url_string).__name__}\")\n        parsed_url = urlparse(url_string)",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class img(StrictDictionary):\n    url: url\n    width: int\n    height: int\nclass authorSimple(StrictDictionary):\n    authorText: str\n    authorThumbnail: img\n    browseId: str\nclass Comment(StrictDictionary):\n    commentId: str",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "authorSimple",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class authorSimple(StrictDictionary):\n    authorText: str\n    authorThumbnail: img\n    browseId: str\nclass Comment(StrictDictionary):\n    commentId: str\n    text: str\n    author: authorSimple\n    publishedOn: publishTime\n    replyCount: int",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class Comment(StrictDictionary):\n    commentId: str\n    text: str\n    author: authorSimple\n    publishedOn: publishTime\n    replyCount: int\n    isLiked: strbool\n    replyContinuation: str\n    authorIsChannelOwner: strbool\n    voteStatus: str",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "continuationToken",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class continuationToken(str):\n    def __new__(cls, data=str()):\n        return super().__new__(cls, data)\nclass SortMember(StrictDictionary):\n    name: str\n    continuation: continuationToken\n    selected: strbool\nclass Comments(StrictDictionary):\n    sortBy: Optional[List[SortMember]]\n    count: Optional[int]",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "SortMember",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class SortMember(StrictDictionary):\n    name: str\n    continuation: continuationToken\n    selected: strbool\nclass Comments(StrictDictionary):\n    sortBy: Optional[List[SortMember]]\n    count: Optional[int]\n    Listed: List[Union[Comment, continuationToken]]\n# SECTION Test data\n# Test instances (updated)",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "Comments",
+        "kind": 6,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "class Comments(StrictDictionary):\n    sortBy: Optional[List[SortMember]]\n    count: Optional[int]\n    Listed: List[Union[Comment, continuationToken]]\n# SECTION Test data\n# Test instances (updated)\n# Test dataset for Comments\ntest_dataset = Comments(\n    sortBy=[\n        SortMember(",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "initialize",
+        "kind": 2,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "def initialize(annot: Type) -> Any:\n    if get_origin(annot)== Optional or type(None) in get_args(annot):\n        return None\n    if get_origin(annot) == Union:\n        return initialize(get_args(annot)[0])\n    elif get_origin(annot) in (List,list):\n        return []\n    elif get_origin(annot) in (Dict,dict):\n        return {}\n    elif get_origin(annot) in (Set,set):",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "kind": 2,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "def validate(annot:Type,value):  # sourcery skip: low-code-quality\n    if type(value) in (annot,get_origin(annot)) : \n        return True\n    if annot==Any or get_origin(annot)==Any:\n        return True\n    # Check Union\n    if get_origin(annot) in (Union, Optional):\n        return any(validate(args,value) for args in get_args(annot))\n    sequentialList=[List,Tuple,Set]\n    if annot in sequentialList or get_origin(annot) in [get_origin(sq) for sq in sequentialList]:",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "to_raw_dict",
+        "kind": 2,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "def to_raw_dict(obj: object, processed=None):\n    if processed is None:\n        processed = set()\n    # if id(obj) in processed:\n    #     return \"<circular reference>\"\n    # processed.add(id(obj))\n    if isinstance(obj, dict):\n        out = {}\n        for key, value in obj.items():\n            if value is None:",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataset",
+        "kind": 5,
+        "importPath": "test.singlefile",
+        "description": "test.singlefile",
+        "peekOfCode": "test_dataset = Comments(\n    sortBy=[\n        SortMember(\n            name=\"Sort 1\",\n            continuation=continuationToken(\"token1\"),\n            selected=strbool(True)\n        ),\n        SortMember(\n            name=\"Sort 2\",\n            continuation=continuationToken(\"token2\"),",
+        "detail": "test.singlefile",
+        "documentation": {}
+    },
+    {
+        "label": "dateInt",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class dateInt(int):\n    \"\"\"\n        A subclass of int that stores a date in an integer format that represents \n        the date as the number of milliseconds since the Unix epoch (January 1, 1970).\n        Accepts date strings in the following formats:\n        - 'YYYY-MM-DD'\n        - 'MMM DD, YYYY'\n        - 'YYYY-MM-DDTHH:MM:SSZ'\n        - 'YYYY-MM-DDTHH:MM:SS.sssZ'\n        - 'YYYY-MM-DDTHH:MM:SS±HH:MM'",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "publishTime",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class publishTime(StrictDictionary):\n    publishedTimeText: str\n    since: Union[float,dateInt] # Just for test purpose other wise float only. float(time.time()) used here\nclass strbool(int):\n    def __new__(cls, value=bool()):\n        if isinstance(value, str):\n            if value.lower() == \"true\":\n                return super().__new__(cls, 1)\n            elif value.lower() == \"false\":\n                return super().__new__(cls, 0)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "strbool",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class strbool(int):\n    def __new__(cls, value=bool()):\n        if isinstance(value, str):\n            if value.lower() == \"true\":\n                return super().__new__(cls, 1)\n            elif value.lower() == \"false\":\n                return super().__new__(cls, 0)\n        return super().__new__(cls, value)\nclass url(str):\n    def __new__(cls, url_string=str()):",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class url(str):\n    def __new__(cls, url_string=str()):\n        if not url_string:\n            obj = super().__new__(cls, url_string)\n            obj.query_params = {}\n            return obj\n        if not isinstance(url_string, str):\n            raise TypeError(\n                f\"Expected str, but got {type(url_string).__name__}\")\n        parsed_url = urlparse(url_string)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "img",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class img(StrictDictionary):\n    url: url\n    width: int\n    height: int\nclass authorSimple(StrictDictionary):\n    authorText: str\n    authorThumbnail: img\n    browseId: str\nclass Comment(StrictDictionary):\n    commentId: str",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "authorSimple",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class authorSimple(StrictDictionary):\n    authorText: str\n    authorThumbnail: img\n    browseId: str\nclass Comment(StrictDictionary):\n    commentId: str\n    text: str\n    author: authorSimple\n    publishedOn: publishTime\n    replyCount: int",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class Comment(StrictDictionary):\n    commentId: str\n    text: str\n    author: authorSimple\n    publishedOn: publishTime\n    replyCount: int\n    isLiked: strbool\n    replyContinuation: str\n    authorIsChannelOwner: strbool\n    voteStatus: str",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "continuationToken",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class continuationToken(str):\n    def __new__(cls, data=str()):\n        return super().__new__(cls, data)\nclass SortMember(StrictDictionary):\n    name: str\n    continuation: continuationToken\n    selected: strbool\nclass Comments(StrictDictionary):\n    sortBy: Optional[List[SortMember]]\n    count: Optional[int]",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "SortMember",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class SortMember(StrictDictionary):\n    name: str\n    continuation: continuationToken\n    selected: strbool\nclass Comments(StrictDictionary):\n    sortBy: Optional[List[SortMember]]\n    count: Optional[int]\n    Listed: List[Union[Comment, continuationToken]]\n# SECTION Test data\n# Test instances (updated)",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "Comments",
+        "kind": 6,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "class Comments(StrictDictionary):\n    sortBy: Optional[List[SortMember]]\n    count: Optional[int]\n    Listed: List[Union[Comment, continuationToken]]\n# SECTION Test data\n# Test instances (updated)\n# Test dataset for Comments\ntest_dataset = Comments(\n    sortBy=[\n        SortMember(",
+        "detail": "test",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataset",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "test_dataset = Comments(\n    sortBy=[\n        SortMember(\n            name=\"Sort 1\",\n            continuation=continuationToken(\"token1\"),\n            selected=strbool(True)\n        ),\n        SortMember(\n            name=\"Sort 2\",\n            continuation=continuationToken(\"token2\"),",
+        "detail": "test",
         "documentation": {}
     }
 ]
