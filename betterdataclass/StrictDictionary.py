@@ -63,6 +63,7 @@ class Dictionary(object):
         else:
             return super().__getattribute__(__name)
     
+
     def __getitem__(self, name) -> Any:
         """
         Provides indexing and retrieval functionality to the object.
